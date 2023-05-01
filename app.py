@@ -6,6 +6,9 @@ import streamlit as st
 
 
 
+
+
+
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_icon=":bar_chart:",
                    layout="wide",
@@ -13,7 +16,7 @@ st.set_page_config(page_icon=":bar_chart:",
 
 df = pd.read_excel('Summary.xlsx', engine='openpyxl',  nrows=100,
                    )
-
+st.markdown("[Home Page](https://econobilidade.pythonanywhere.com/gustavo/welcome/)")
 
 st.sidebar.header("Please Filter Here:")
 
@@ -85,6 +88,7 @@ fig_investment_by_type.update_layout(
 )
 
 st.plotly_chart(fig_investment_by_type)
+
 
 
 # hide_st_style = """"
